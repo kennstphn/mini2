@@ -1,0 +1,13 @@
+<div class="btn-group-vertical" role="group" aria-label="actions">
+    <!-- Button for Add Person modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addPeopleModal">
+            Add a Person
+        </button>
+    <!-- Button for Add Group modal-->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addGroupModal">
+            Add a Group
+        </button>
+</div>
+
+{% include 'modals/add.user.twig' %}
+{% include 'modals/add.group.twig' %}

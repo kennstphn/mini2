@@ -1,0 +1,72 @@
+{% extends "_base.twig" %}
+{% block content %}
+    <h2>Edit User: {{ user.firstname }} {{ user.lastname }}</h2>
+    <form class="form-horizontal" action="/users/updateuser" method="post">
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2">Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First" value="{{ user.firstname }}">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last" value="{{ user.lastname }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="preferredname" class="col-sm-2">Nickname</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="preferredname" name="preferredname" placeholder="preferred" value="{{ user.preferredname }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="month" class="col-xs-12 col-sm-2">Date of Birth</label>
+            <div class="col-xs-3 col-sm-2">
+                <input type="text" class="form-control" id="month" name="month" placeholder="MM" value="{{ user.month }}">
+            </div>
+            <div class="col-xs-3 col-sm-2">
+                <input type="text" class="form-control" id="day" name="day" placeholder="DD" value="{{ user.day }}">
+            </div>
+            <div class="col-xs-4 col-sm-4">
+                <input type="text" class="form-control" id="year" name="year" placeholder="YYYY" value="{{ user.year }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender" class="col-sm-2">Gender</label>
+            <div class="col-sm-4">
+                <select name="gender" class="form-control">
+                    <option disabled selected>Please Select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone1" class="col-sm-2">Phone</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="phone1" name="phone1" placeholder="Phone" value="{{ user.phone1 }}">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="phone2" name="phone2" placeholder="Phone (alt)" value="{{ user.phone2 }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2">Email</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="email1" name="email1" placeholder="Email" value="{{ user.email1 }}">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="email2" name="email2" placeholder="Email (alt)" value="{{ user.email2 }}">
+            </div>
+        </div>
+        <div class="form-group hidden">
+            <label for="email" class="col-sm-2">User ID</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="user_id" name="user_id" placeholder="user_id" value="{{ user.user_id }}">
+            </div>
+        </div>
+        <div class="btn-group" role="group" aria-label="actions">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <a class="btn btn-danger" href="/users">Cancel</a>
+        </div>
+        <br/><br/>
+    </form>
+{% endblock %}

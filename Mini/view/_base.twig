@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="">
-    <title>MINI 2</title>
+    <title>Sweet CDM</title>
     <!-- css -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <!-- jQuery -->
@@ -16,19 +20,24 @@
 
     <!-- logo -->
     <div class="logo">
-        MINI<span class="number">2</span>
+       S<span class="number">herman</span>CDM
     </div>
 
     <!-- navigation -->
-    <div class="navigation">
-        <a href="/">home</a>
-        <a href="/subpage">subpage</a>
-        <a href="/subpage/deeper">subpage/deeper</a>
-        <a href="/songs">songs</a>
-    </div>
+    {% include 'navbar.twig' %}
 
     <!-- main content, will be injected via Twig -->
-    {% block content %} {% endblock %}
+    <div class="container">
+        <div class="col-sm-9">
+            {% block content %} {% endblock %}
+        </div>
+        <div class="col-sm-3">
+            {% include 'sidebar.twig' %}
+        </div>
+    </div>
 
+
+    <!-- Bootstrap JS from maxcdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

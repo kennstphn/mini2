@@ -1,0 +1,50 @@
+{% extends "_base.twig" %}
+{% block content %}
+        <h2>Edit Group: {{ group.group_name }}</h2>
+        <form class="form-horizontal" action="/groups/updategroup" method="post">
+            <div class="form-group">
+                <label for="group_name" class="col-sm-2">Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="group_name" name="group_name" placeholder="Name" value="{{ group.group_name }}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address1" class="col-sm-2">Address</label>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="address1" name="address1" placeholder="Address" value="{{ group.address1 }}">
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="address2" name="address2" placeholder="Address line 2" value="{{ group.address2 }}">
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="city" value="{{ group.city }}">
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="state" name="state" placeholder="State" value="{{ group.state }}">
+                        </div>
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode" value="{{ group.zipcode }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group hidden">
+                <label for="group_id" class="col-sm-2">Group ID</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="group_id" name="group_id" placeholder="group_id" value="{{ group.group_id }}">
+                </div>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="type" name="type" placeholder="type" value="{{ group.type }}">
+                </div>
+
+            </div>
+            <div class="btn-group col-sm-offset-2" role="group" aria-label="process">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a class="btn btn-danger" href="/groups/{{ group.group_id }}" role="button">Cancel</a>
+            </div>
+
+            <br/><br/>
+        </form>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!-- Modal -->
+<div class="modal fade" id="addPeopleModal" tabindex="-1" role="dialog" aria-labelledby="addPerson">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addPeopleModalLabel">Add Person</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form-horizontal" action="/users/adduser" method="POST">
+                        <div class="form-group">
+                            <label for="names" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-5" id="names">
+                                <input type="text" class="form-control breathe-down" name="firstname" id="firstname" placeholder="First">
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last">
+                            </div>
+                            <div class="col-sm-5 col-sm-offset-2">
+                                <input type="text" class="form-control" id="preferred" name="preferredname" placeholder="Nickname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob" class="col-xs-12 col-sm-2 control-label">Date of Birth</label>
+                            <div class="col-sm-10">
+                                <div class="row" id="dob">
+                                    <div class="col-xs-4 col-sm-3">
+                                        <input type="text" class="form-control" name="month" id="month" placeholder="MM">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-3" style="margin-left: -20px">
+                                        <input type="text" class="form-control" name="day" id="day" placeholder="DD">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-6" style="padding:0px;">
+                                        <input type="text" class="form-control" name="year" id="year" placeholder="YYYY">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phones" class="col-sm-2 control-label">Phone</label>
+                            <div class="col-sm-5" id="phones">
+                                <input type="tel" class="form-control" name="phone1" id="phone1" placeholder="Primary">
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="tel" class="form-control" name="phone2" id="phone2" placeholder="Alternate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-5" id="email">
+                                <input type="email" class="form-control" name="email1" id="email1" placeholder="Primary">
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" name="email2" id="email2" placeholder="Alternate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" name="submit_add_user" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
