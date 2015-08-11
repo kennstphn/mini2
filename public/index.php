@@ -45,7 +45,7 @@ $app->configureMode('development', function () use ($app) {
             'db_port' => '',
             'db_name' => 'scdm',
             'db_user' => 'root',
-            'db_pass' => 'gxou9fp1984KS$$'
+            'db_pass' => ''
         )
     ));
 });
